@@ -1,20 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+    name: omni-app-deployment
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      run: nginx
-  template:
-    metadata:
-      labels:
-        run: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx
-        ports:
-          - containerPort: 80
-        imagePullPolicy: IfNotPresent
+    replicas: 2
+    selectors:
+        matchLabels:
+            app: omni-app
+    template:
+        metadata:
+            labels:
+                app: omni-app
+        spec:
+            containers:
+                - name: omni-app
+                  image: farah13/omni-app:1.0.0-70
+                  resources:
+                    limits:
+                        memory: "256Mi"
+                        cpu: "500m"
+                ports:
+                  - containerPort: 8080
