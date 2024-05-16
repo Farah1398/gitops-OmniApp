@@ -25,13 +25,13 @@ pipeline {
 			steps{
 				sh """
 					cat Manifests/deployment.yaml
-					sed -i 's/${APP_NAME}.*/${APP_NAME}:${IMAGE_TAG}/g' deployment.yaml
+					sed -i 's/${APP_NAME}.*/${APP_NAME}:${IMAGE_TAG}/g' Manifests/deployment.yaml
 					cat Manifests/deployment.yaml
 				"""
 			}
 		}
 		
-		stage("Pysh the changed deployment file to Git"){
+		stage("Push the changed deployment file to Git"){
 			steps{
 				
 				sh """
