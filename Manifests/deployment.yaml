@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: omni-app-deployment
+    name: omniApp
 spec:
     replicas: 2
     selectors:
         matchLabels:
-            app: omni-app
+            app: omniApp
     template:
         metadata:
             labels:
-                app: omni-app
+                app: omniApp
         spec:
             containers:
-                - name: omni-app
+                - name: omniApp
                   image: farah13/omni-app:1.0.0-69
                   resources:
                     limits:
