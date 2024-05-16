@@ -5,7 +5,7 @@ metadata:
   name: omni-application-deployment
 spec:
   replicas: 2
-  selectors:
+  selector:
     matchLabels:
       app: omni-application
   template:
