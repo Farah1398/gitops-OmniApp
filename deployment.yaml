@@ -1,23 +1,24 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: omniApp
+  name: omniApp
 spec:
-    replicas: 2
-    selectors:
-        matchLabels:
-            app: omniApp
-    template:
-        metadata:
-            labels:
-                app: omniApp
-        spec:
-            containers:
-                - name: omniApp
-                  image: farah13/omni-app:83
-                  resources:
-                    limits:
-                        memory: "256Mi"
-                        cpu: "500m"
-                ports:
-                  - containerPort: 8080
+  replicas: 2
+  selectors:
+    matchLabels:
+      app: omniApp
+  template:
+    metadata:
+      labels:
+        app: omniApp
+    spec:
+      containers:
+        - name: omniApp
+          image: farah13/omni-app:83
+          resources:
+            limits:
+              memory: 256Mi
+              cpu: 500m
+      ports:
+        - containerPort: 8080
