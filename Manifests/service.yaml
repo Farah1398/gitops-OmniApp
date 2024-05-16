@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: omni-app
   labels:
-    run: nginx
+    run: omni-app
 spec:
   type: NodePort
   ports:
@@ -12,4 +12,4 @@ spec:
     protocol: TCP
     name: http
   selector:
-    run: nginx
+    run: omni-app
