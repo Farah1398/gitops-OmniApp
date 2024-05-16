@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: omni-application
+  name: omni-application-deployment
 spec:
   replicas: 2
   selectors:
