@@ -42,7 +42,7 @@ pipeline {
 				"""
 				
 				withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-					sh "git push git@github.com:Farah1398/gitops-OmniApp.git main"
+					sh "git push https://github.com/Farah1398/gitops-OmniApp.git main"
 				}
 				
 			}
