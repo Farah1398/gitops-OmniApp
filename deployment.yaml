@@ -20,5 +20,5 @@ spec:
             limits:
               memory: 256Mi
               cpu: 500m
-      ports:
-        - containerPort: 8080
+          ports:
+          - containerPort: 8080
