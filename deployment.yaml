@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: omni
-          image: farah13/omni-app:1.0.0-109
+          image: farah13/omni-app:1.0.0-110
           resources:
             limits:
               memory: 256Mi
